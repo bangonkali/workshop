@@ -1,0 +1,22 @@
+{
+  "name": "analogweb",
+  "version": "0.0.1",
+  "description": "A very simple sample application that shows how to connect the Arduino Uno's Analog Input to the NodeJS socket and display relative values using the browser.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.10.2",
+    "serialport": "^2.0.6",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "analog",
+    "arduino",
+    "web"
+  ],
+  "author": "gilmichael@acomsys.net",
+  "license": "MIT"
+}

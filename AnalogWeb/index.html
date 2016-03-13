@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Analog Web</title>
+        <script src="/jquery.min.js"></script>
+        <script src="/jquery.sparkline.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
+
+            socket.on('data', function(msg){
+                $('#messages').html(msg);
+//                console.log(msg);
+
+                var pieVal = (parseInt(msg) / 1023)*100;
+                var pieOptions = {type:'pie', height:154, sliceColors:['blue','white']};
+                var pieData = [pieVal, 100-pieVal];
+
+                $('.sparkline').sparkline(pieData, pieOptions);
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Websocket</h1>
+        <p id="messages"></p>
+        <div class="sparkline inline"></div>
+    </body>
+</html>
