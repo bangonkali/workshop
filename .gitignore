@@ -38,3 +38,6 @@ app/**/*.map
 typings
 jspm_packages
 bower_components
+
+# Jetbrains IDEA IDE
+.idea
